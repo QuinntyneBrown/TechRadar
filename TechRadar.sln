@@ -1,11 +1,17 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.26124.0
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30711.63
 MinimumVisualStudioVersion = 15.0.26124.0
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{A3BAAAE4-ADD7-46CB-AB8B-676CB4F00E8D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TechRadar.Api", "src\TechRadar.Api\TechRadar.Api.csproj", "{D81A5975-1FE1-450C-A9D5-D578FC7090C4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TechRadar.Api", "src\TechRadar.Api\TechRadar.Api.csproj", "{D81A5975-1FE1-450C-A9D5-D578FC7090C4}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{AD201CAD-14DE-4EF1-8272-FB482D9383DB}"
+	ProjectSection(SolutionItems) = preProject
+		.gitignore = .gitignore
+		clisettings.json = clisettings.json
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,9 +21,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 		Release|x64 = Release|x64
 		Release|x86 = Release|x86
-	EndGlobalSection
-	GlobalSection(SolutionProperties) = preSolution
-		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{D81A5975-1FE1-450C-A9D5-D578FC7090C4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
@@ -33,7 +36,13 @@ Global
 		{D81A5975-1FE1-450C-A9D5-D578FC7090C4}.Release|x86.ActiveCfg = Release|Any CPU
 		{D81A5975-1FE1-450C-A9D5-D578FC7090C4}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{D81A5975-1FE1-450C-A9D5-D578FC7090C4} = {A3BAAAE4-ADD7-46CB-AB8B-676CB4F00E8D}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {1BE10506-59A3-455B-8AF9-47427DD154A8}
 	EndGlobalSection
 EndGlobal

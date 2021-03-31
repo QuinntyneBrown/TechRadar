@@ -31,7 +31,17 @@ namespace TechRadar.Api.Controllers
         
             return response;
         }
-        
+
+
+
+        [HttpDelete("{blipId}", Name = "RemoveBlipRoute")]
+        [ProducesResponseType(typeof(string), (int)HttpStatusCode.NotFound)]
+        [ProducesResponseType((int)HttpStatusCode.InternalServerError)]
+        [ProducesResponseType(typeof(ProblemDetails), (int)HttpStatusCode.BadRequest)]
+        [ProducesResponseType(typeof(RemoveBlip.Response), (int)HttpStatusCode.OK)]
+        public async Task<ActionResult<RemoveBlip.Response>> Remove([FromRoute] RemoveBlip.Request request)
+            => await _mediator.Send(request);
+
         [HttpGet(Name = "GetBlipsRoute")]
         [ProducesResponseType((int)HttpStatusCode.InternalServerError)]
         [ProducesResponseType(typeof(ProblemDetails), (int)HttpStatusCode.BadRequest)]
