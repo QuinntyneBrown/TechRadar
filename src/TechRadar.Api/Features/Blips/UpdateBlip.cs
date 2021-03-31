@@ -39,11 +39,8 @@ namespace TechRadar.Api.Features
             public async Task<Response> Handle(Request request, CancellationToken cancellationToken) {
             
                 var blip = await _context.Blips.FindAsync(request.Blip.BlipId);
-                
-                blip.Name = request.Blip.Name;
-                blip.Description = request.Blip.Description;
-                blip.Status = request.Blip.Status;
-                blip.Type = request.Blip.Type;
+
+                blip.Update(request.Blip.Name, request.Blip.Description, request.Blip.Status, request.Blip.Type);
 
                 await _context.SaveChangesAsync(cancellationToken);
 			    
